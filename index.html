@@ -1,54 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Address Form</title>
+    <title>HTML Quiz</title>
 </head>
 <body>
 
-    <h1>Shipping Address</h1>
+    <h1>Basic HTML Quiz</h1>
+    <p>Please answer the following questions to the best of your ability.</p>
 
-    <form action="/submit-address" method="post">
+    <form action="/submit-quiz" method="post" enctype="multipart/form-data">
 
-        <!-- Full Name -->
-        <label for="full-name">Full Name:</label><br>
-        <input type="text" id="full-name" name="full_name" required><br><br>
+        <!-- Question 1: Select (Dropdown) -->
+        <fieldset>
+            <legend>Question 1: What does HTML stand for?</legend>
+            <label for="q1-answer">Your Answer:</label>
+            <select id="q1-answer" name="html_meaning" required>
+                <option value="">-- Choose an option --</option>
+                <option value="hyper_text_markup_language">Hyper Text Markup Language</option>
+                <option value="high_tech_modern_language">High Tech Modern Language</option>
+                <option value="home_tool_management_language">Home Tool Management Language</option>
+                <option value="hyperlink_and_text_markup_language">Hyperlink and Text Markup Language</option>
+            </select>
+        </fieldset>
 
-        <!-- Street Address Line 1 -->
-        <label for="address-1">Street Address:</label><br>
-        <input type="text" id="address-1" name="address_1" required><br><br>
+        <br>
 
-        <!-- Street Address Line 2 (Optional) -->
-        <label for="address-2">Apartment, Suite, etc. (Optional):</label><br>
-        <input type="text" id="address-2" name="address_2"><br><br>
+        <!-- Question 2: Radio Buttons -->
+        <fieldset>
+            <legend>Question 2: Which is the correct tag for the largest heading?</legend>
+            <input type="radio" id="h1_radio" name="heading_tag" value="h1" required>
+            <label for="h1_radio">&lt;h1&gt;</label><br>
+            
+            <input type="radio" id="h6_radio" name="heading_tag" value="h6">
+            <label for="h6_radio">&lt;h6&gt;</label><br>
 
-        <!-- City -->
-        <label for="city">City:</label><br>
-        <input type="text" id="city" name="city" required><br><br>
+            <input type="radio" id="head_radio" name="heading_tag" value="head">
+            <label for="head_radio">&lt;head&gt;</label>
+        </fieldset>
 
-        <!-- State/Province/Region -->
-        <label for="state">State/Province/Region:</label><br>
-        <input type="text" id="state" name="state" required><br><br>
+        <br>
 
-        <!-- ZIP/Postal Code -->
-        <label for="zip">ZIP / Postal Code:</label><br>
-        <input type="text" id="zip" name="zip" required><br><br>
+        <!-- Question 3: Checkboxes -->
+        <fieldset>
+            <legend>Question 3: Which of the following are HTML block-level elements? (Select all that apply)</legend>
+            <input type="checkbox" id="div_checkbox" name="block_elements" value="div">
+            <label for="div_checkbox">&lt;div&gt;</label><br>
 
-        <!-- Country -->
-        <label for="country">Country:</label><br>
-        <select id="country" name="country" required>
-            <option value="">--Select a country--</option>
-            <option value="usa">United States</option>
-            <option value="can">Canada</option>
-            <option value="gbr">United Kingdom</option>
-            <option value="deu">Germany</option>
-        </select><br><br>
+            <input type="checkbox" id="span_checkbox" name="block_elements" value="span">
+            <label for="span_checkbox">&lt;span&gt;</label><br>
 
-        <!-- Phone Number -->
-        <label for="phone">Phone Number:</label><br>
-        <input type="tel" id="phone" name="phone"><br><br>
+            <input type="checkbox" id="p_checkbox" name="block_elements" value="p">
+            <label for="p_checkbox">&lt;p&gt;</label><br>
 
-        <!-- Submit Button -->
-        <input type="submit" value="Submit Address">
+            <input type="checkbox" id="a_checkbox" name="block_elements" value="a">
+            <label for="a_checkbox">&lt;a&gt;</label>
+        </fieldset>
+
+        <br>
+
+        <!-- Question 4: File Input -->
+        <fieldset>
+            <legend>Question 4: Upload a screenshot of your code editor showing your HTML document.</legend>
+            <input type="file" id="code_screenshot" name="code_screenshot" accept="image/*" required>
+        </fieldset>
+
+        <br>
+        
+        <input type="submit" value="Submit Quiz">
 
     </form>
 
