@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Address Form</title>
+</head>
+<body>
+
+    <h1>Shipping Address</h1>
+
+    <form action="/submit-address" method="post">
+
+        <!-- Full Name -->
+        <label for="full-name">Full Name:</label><br>
+        <input type="text" id="full-name" name="full_name" required><br><br>
+
+        <!-- Street Address Line 1 -->
+        <label for="address-1">Street Address:</label><br>
+        <input type="text" id="address-1" name="address_1" required><br><br>
+
+        <!-- Street Address Line 2 (Optional) -->
+        <label for="address-2">Apartment, Suite, etc. (Optional):</label><br>
+        <input type="text" id="address-2" name="address_2"><br><br>
+
+        <!-- City -->
+        <label for="city">City:</label><br>
+        <input type="text" id="city" name="city" required><br><br>
+
+        <!-- State/Province/Region -->
+        <label for="state">State/Province/Region:</label><br>
+        <input type="text" id="state" name="state" required><br><br>
+
+        <!-- ZIP/Postal Code -->
+        <label for="zip">ZIP / Postal Code:</label><br>
+        <input type="text" id="zip" name="zip" required><br><br>
+
+        <!-- Country -->
+        <label for="country">Country:</label><br>
+        <select id="country" name="country" required>
+            <option value="">--Select a country--</option>
+            <option value="usa">United States</option>
+            <option value="can">Canada</option>
+            <option value="gbr">United Kingdom</option>
+            <option value="deu">Germany</option>
+        </select><br><br>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Address">
+
+    </form>
+
+</body>
+</html>
